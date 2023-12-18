@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+        }
+        .main{
+            background-color: rgba(148,187,233,1);
+            width: 40%;
+            height: 45%;
+            text-align: center;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+
+        }
+
+        p{
+            font-weight: bold;
+            font-size: large;
+        }
+        #btn{
+            background-color: rgba(238,174,202,1);
+            width: 150px;
+            height: 40px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>
+            Triangle Area Calculator
+        </h1>
+
+        <label for="base">Enter the base of Triangle : </label>
+        <input type="number" name="" id="base"><br> <br>
+
+        <label for="height">Enter the height of Triangle : </label>
+        <input type="number" name="" id="height"> <br><br>
+
+        <button id="btn" onclick="calculate()">Calculate Area</button>
+
+        <p id="result"></p>
+
+        </div>
+
+        <script>
+            function calculate() {
+
+                var base = document.getElementById("base").value;
+                var height = document.getElementById("height").value;
+                
+                var areaValue = (base * height) / 2;
+
+                document.getElementById("result").innerHTML = "The area of Triangle is : " + areaValue
+            }
+        </script>
+    
+</body>
+</html>
